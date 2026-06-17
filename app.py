@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # MySQL Configuration
 app.config['MYSQL_HOST'] = os.environ['MYSQL_HOST']
@@ -77,5 +77,5 @@ def delete_student(id):
     cursor.close()
     return redirect(url_for('index'))
 
-if _name_ == '_main_':
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
