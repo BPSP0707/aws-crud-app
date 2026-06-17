@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 from dotenv import load_dotenv
-
+import boto3
 # Load environment variables
 load_dotenv()
 
