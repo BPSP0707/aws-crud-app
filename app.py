@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 load_dotenv()
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # MySQL Configuration
 app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
